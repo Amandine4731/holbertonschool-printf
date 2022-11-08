@@ -1,20 +1,23 @@
-<mxfile host="app.diagrams.net" modified="2022-11-07T15:42:01.536Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="Qw2rkZfewjMP-f5XuaYH" version="20.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-08T09:17:47.474Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="IaV_a8bVEv7cf7OrWpZY" version="20.5.3" type="github">
   <diagram id="WwB0yrFr8-9Pms-kcAjm" name="Page-1">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="X6OqjAZfzEXDJyi5xuqe-1" value="&lt;b&gt;&lt;i&gt;&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 17px;&quot;&gt;END&lt;/font&gt;&lt;/i&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=5;" vertex="1" parent="1">
-          <mxGeometry x="376" y="690" width="75" height="50" as="geometry" />
+        <mxCell id="0lwGLxjgXCkEdpAq0Iga-1" value="START" style="ellipse;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="20" width="90" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="X6OqjAZfzEXDJyi5xuqe-2" value="&lt;b&gt;&lt;i&gt;&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 17px;&quot;&gt;START&lt;/font&gt;&lt;/i&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=5;" vertex="1" parent="1">
-          <mxGeometry x="376" y="100" width="75" height="50" as="geometry" />
+        <mxCell id="0lwGLxjgXCkEdpAq0Iga-2" value="&lt;b&gt;&lt;i&gt;Typedef Struct&amp;nbsp; -&amp;gt; var_t&lt;/i&gt;&lt;/b&gt;&lt;br&gt;char *var;&lt;br&gt;int (*f)(const char *format, ...);" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="189" y="120" width="177.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="X6OqjAZfzEXDJyi5xuqe-4" value="" style="endArrow=classic;html=1;rounded=0;fontSize=17;fontColor=#FF0000;strokeWidth=13;strokeColor=#FF0000;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="410" y="170" as="sourcePoint" />
-            <mxPoint x="410" y="670" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="0lwGLxjgXCkEdpAq0Iga-3" value="&lt;b&gt;&lt;i&gt;3 functions&lt;br&gt;&lt;/i&gt;&lt;/b&gt;&lt;div&gt;void var_c(va_list p);&lt;/div&gt;&lt;div&gt;&amp;nbsp;void var_s(va_list p);&lt;/div&gt;&lt;div&gt;&amp;nbsp;void var_%(va_list p);&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="189" y="218" width="177.5" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="0lwGLxjgXCkEdpAq0Iga-9" value="" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="366.5" y="240" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0lwGLxjgXCkEdpAq0Iga-10" value="variadics" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="240" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
