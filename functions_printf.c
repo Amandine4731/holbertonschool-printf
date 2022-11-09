@@ -8,7 +8,6 @@ int var_c(va_list mylist)
 	int c = va_arg(mylist, int);
 	return (write(1, &c, 1));
 }
-#include "main.h"
 /**
  * var_s - to print a string
  * @mylist: name of my list of arguments
