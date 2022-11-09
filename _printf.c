@@ -2,44 +2,39 @@
 /**
  * _printf - a copy of the function printf
  * @format: is a character string
- * Return:
+ * Return: The length of printed chars
  */
 int _printf(const char *format, ...)
 {
 	int x = 0;
 	va_list mylist;
 	int i = 0;
+	int len = 0;
 
-	var_t vars[].var = {
-		{"c", var_c},
-		{"s", var_s},
-		{NULL, NULL}
+	var_t vars[] = {
+		{'c', var_c},
+		{'s', var_s},
+		{0, NULL}
 	};
 
 	va_start(mylist, format);
 
 	for (x = 0; format[x] != '\0'; x++)
 	{
-		while (vars[i].var != NULL)
+		if (format[x] == '%') 
 		{
-			// Vous pouvez pas comparer format[x] à "55" c'est pas correct car c'est un char
-			if (format[x] == '%' || format[x] != '%','%')
+			for (i = 0; vars[i].var != 0; i++)
 			{
-				if (format[x + 1] == *vars[i].var)
+				if (format[x + 1] == vars[i].var)
 				{
-					return (vars[i].f);
+					len += vars[i].f(mylist);
 				}
 			}
-			// Vous pouvez pas comparer format[x] à "55" c'est pas correct car c'est un char
-			if (format[x] == '%', '%')
-			{
-				write(1, '%', 1);
-			}
-			// A quel moment vous printez le format si il n'y a pas de % dans le format ? PAr exemple si j'utilise 
-			// Printf("Hello World") c'est sensé afficher Hello World, dans votre code vous prenez pas en compte ce cas de figure, peut être que vous avez pas terminé encore ?
-		i++;
+		} 
+		else{
+			len += write(1, &format[x], 1);
 		}
-	return (format);
 	}
-	return (NULL);
+	va_end(mylist);
+	return len;
 }

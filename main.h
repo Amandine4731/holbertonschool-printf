@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-
+#include <stdarg.h>
+#include <unistd.h>
 /**
  * struct var - Struct var
  *
@@ -12,13 +13,12 @@
  */
 typedef struct var
 {
-	char *var;
-void (*f)(va_list mylist);
+	char var;
+	int (*f)(va_list mylist);
 } var_t;
 
-void var_c(va_list mylist);
-void var_s(va_list mylist);
-
-int _strlen(char *s)
+int var_c(va_list mylist);
+int var_s(va_list mylist);
+int _strlen(char *s);
 int _printf(const char *format, ...);
 #endif
