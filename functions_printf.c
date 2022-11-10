@@ -24,5 +24,4 @@ int var_s(va_list mylist)
 		s = "(null)";
 	}
 	return (write(1, s, _strlen(s)));
-
 }
