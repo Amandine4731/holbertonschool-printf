@@ -1,15 +1,16 @@
 #include "main.h"
 /**
-* _strlen - to count
-* @s: a pointer
-* Return: i
-*/
-
+ * _strlen - to count
+ * @s: a pointer
+ * Return: i
+ */
 int _strlen(char *s)
 {
-  int i = 0;
+	int i = 0;
 
-  while (s[i])
-    i++;
-  return (i);
+	while (s[i])
+	{
+		i++;
+	}
+	return (i);
 }
