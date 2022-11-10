@@ -34,8 +34,15 @@ int var_s(va_list mylist)
 int var_d(va_list mylist)
 {
 	int d = va_arg(mylist, int) + '0';
-	
-	return (write(1, &d, 1));
+
+	if (d == '0')
+	{
+		return (0);
+	}
+	else
+	{
+		return (write(1, &d, 1));     
+	}
 }
 /**
  * var_i - to print an interger
@@ -44,9 +51,16 @@ int var_d(va_list mylist)
  */
 int var_i(va_list mylist)
 {
-	int i = va_arg(mylist, int) + '0';
+	int d = va_arg(mylist, int) + '0';
 
-	return (write(1, &i, 1));
+	if (d == '0')
+	{
+		return (0);
+	}
+	else
+	{
+		return (write(1, &d, 1));
+	}
 }
 /**
  * _INT_MIN - number min
