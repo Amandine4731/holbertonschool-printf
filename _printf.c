@@ -9,7 +9,6 @@ int _printf(const char *format, ...)
 	int x, i;
 	int len = 0;
 	va_list mylist;
-
 	var_t vars[] = {
 		{'c', var_c},
 		{'s', var_s},
@@ -18,11 +17,15 @@ int _printf(const char *format, ...)
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-
 	va_start(mylist, format);
 	for (x = 0; format[x] != '\0'; x++)
 	{
-		if (format[x] == '%')
+		if (format[x] == '%' && format[x + 1] == '%')
+		  {
+		  len += write(1, &format[x], 1);
+		  x++;
+		  }
+		else if (format[x] == '%')
 		{
 			for (i = 0; vars[i].var != 0; i++)
 			{
@@ -36,9 +39,9 @@ int _printf(const char *format, ...)
 			if (vars[i].var == 0)
 			{
 				len += write(1, &format[x], 1);
+				len += write(1, &format[x + 1], 1);
+				x += 1;
 			}
-			if (format[x + 1] == '%')
-				x++;
 		}
 		else
 			len += write(1, &format[x], 1);
