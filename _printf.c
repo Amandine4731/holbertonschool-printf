@@ -17,9 +17,8 @@ int _printf(const char *format, ...)
 	};
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-	{
 		return (-1);
-	}
+
 	va_start(mylist, format);
 	for (x = 0; format[x] != '\0'; x++)
 	{
@@ -34,16 +33,15 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-			if (format[x + 1] == '%' && vars[i].var == 0)
+			if (vars[i].var == 0)
 			{
-				len += write(1, "%", 1);
-				x++;
+				len += write(1, &format[x], 1);
 			}
-	}
-		else
-		{
-			len += write(1, &format[x], 1);
+			if (format[x + 1] == '%')
+				x++;
 		}
+		else
+			len += write(1, &format[x], 1);
 	}
 	va_end(mylist);
 	return (len);
