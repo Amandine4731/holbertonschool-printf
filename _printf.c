@@ -6,14 +6,9 @@
  */
 int _printf(const char *format, ...)
 {
-	int x, i;
-	int len = 0;
+	int x, i, len = 0;
 	va_list mylist;
-	var_t vars[] = {
-		{'c', var_c},
-		{'s', var_s},
-		{0, NULL}
-	};
+	var_t vars[] = {{'c', var_c}, {'s', var_s}, {0, NULL}};
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
@@ -21,10 +16,10 @@ int _printf(const char *format, ...)
 	for (x = 0; format[x] != '\0'; x++)
 	{
 		if (format[x] == '%' && format[x + 1] == '%')
-		  {
-		  len += write(1, &format[x], 1);
-		  x++;
-		  }
+		{
+			len += write(1, &format[x], 1);
+			x++;
+		}
 		else if (format[x] == '%')
 		{
 			for (i = 0; vars[i].var != 0; i++)
