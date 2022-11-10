@@ -19,6 +19,8 @@ typedef struct var
 
 int var_c(va_list mylist);
 int var_s(va_list mylist);
+int var_d(va_list mylist);
+int var_i(va_list mylist);
 int _strlen(char *s);
 int _printf(const char *format, ...);
 #endif
