@@ -7,8 +7,8 @@
 int _printf(const char *format, ...)
 {
 	int x, i;
-	va_list mylist;
 	int len = 0;
+	va_list mylist;
 
 	var_t vars[] = {
 		{'c', var_c},

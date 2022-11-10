@@ -7,6 +7,7 @@
 int var_c(va_list mylist)
 {
 	int c = va_arg(mylist, int);
+
 	return (write(1, &c, 1));
 }
 /**
