@@ -48,17 +48,3 @@ int var_i(va_list mylist)
 
 	return (write(1, &d, 1));
 }
-/**
- * _INT_MIN - number min
- */
-void _INT_MIN(void)
-{
-	write(1, "-2147483648", 11); 
-}
-/**
- * _INT_MAX - number max
- */
-void _INT_MAX(void)
-{
-	write(1, "2147483648", 10); 
-}
