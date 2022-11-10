@@ -35,7 +35,6 @@ int _printf(const char *format, ...)
 		else{
 			len += write(1, &format[x], 1);
 		}
-		return (NULL);
 	}
 	va_end(mylist);
 	return len;
