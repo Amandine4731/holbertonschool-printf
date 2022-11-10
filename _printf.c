@@ -28,6 +28,7 @@ int _printf(const char *format, ...)
 				if (format[x + 1] == vars[i].var)
 				{
 					len += vars[i].f(mylist);
+					x++;
 				}
 			}
 		} 
