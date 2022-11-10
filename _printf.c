@@ -6,9 +6,8 @@
  */
 int _printf(const char *format, ...)
 {
-	int x = 0;
+	int x, i;
 	va_list mylist;
-	int i = 0;
 	int len = 0;
 
 	var_t vars[] = {
@@ -17,11 +16,14 @@ int _printf(const char *format, ...)
 		{0, NULL}
 	};
 
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	{
+		return (-1);
+	}
 	va_start(mylist, format);
-
 	for (x = 0; format[x] != '\0'; x++)
 	{
-		if (format[x] == '%') 
+		if (format[x] == '%')
 		{
 			for (i = 0; vars[i].var != 0; i++)
 			{
@@ -29,13 +31,20 @@ int _printf(const char *format, ...)
 				{
 					len += vars[i].f(mylist);
 					x++;
+					break;
 				}
 			}
-		} 
-		else{
+			if (format[x + 1] == '%' && vars[i].var == 0)
+			{
+				len += write(1, "%", 1);
+				x++;
+			}
+	}
+		else
+		{
 			len += write(1, &format[x], 1);
 		}
 	}
 	va_end(mylist);
-	return len;
+	return (len);
 }
