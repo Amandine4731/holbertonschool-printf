@@ -1,0 +1,100 @@
+.TH PRINTF FUNCTION PROJECT
+
+.SH NAME
+
+.B Printf - Formatted Output Conversion
+
+.SH SYNOPSIS
+
+.B #include "main.h"
+
+.B int _printf(const char *format, ...);
+
+.B _printf
+FORMAT [ARGUMENT]...
+
+.B _printf
+OPTION
+
+.SH DESCRIPTION
+
+.B _printf
+is a function that writes in the stdout. The _printf function is used to display a formatted character string. The first parameter of this function represents the formatting character string: the format. It can be followed by one or more parameters which will be the data used during the display.  We need some specific characters to use _printf function :
+
+.TP
+.BR
+\\"     Double quote.
+
+.TP
+.BR
+\\\\     Backslash
+
+.TP
+.BR
+\\b     Backspace
+
+.TP
+.BR
+\\n     New line
+
+.SH OPTIONS
+
+.TP
+.BR %c
+Used in the FORMAT to print a character
+
+.TP
+.BR %s
+Used in the FORMAT to print a string
+
+.TP
+.BR %%
+Used in the FORMAT to print a percent
+
+.TP
+.BR %d
+Used in the FORMAT to print a digit
+
+.TP
+.BR %i
+Used in the FORMAT to print an integer
+
+.SH EXAMPLES
+
+.TP
+.B Print a character
+_printf('c');
+
+_printf("The first character of our coach's name is a [%c]\\n", 'T');
+
+.TP 
+.B Print a string
+_printf("Hello I'm a string !");
+
+_printf("[%s]\\n", "Yeah, me too !");
+
+.TP
+.B Print an integer
+_printf("We are only [%d] students to create our own _printf function\\n", 2);
+
+.SH RETURN VALUE
+
+It returns the number of characters that are printed. If there is some error then it returns a negative value.
+
+.SH ALSO
+
+If you need to learn more about the original function of printf, you can use "man printf" in your terminal or Google it ;).
+
+.SH BUGS
+
+Any bugs ? Not our fault. Ask to Taieb u.ù
+
+.SH AUTHORS
+
+Amandine Assanat & Mickael Mangin (Alias Micka BIS).
+
+Holberton School TLSE - Cohort 19
+
+.SH COPYRIGHT
+
+Copyright © 2022 Holberton Shool TLSE - Cohort 19.
