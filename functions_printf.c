@@ -20,7 +20,7 @@ int var_s(va_list mylist)
 {
 	int i = 0;
 	char *s = va_arg(mylist, char *);
-	char n[] = "(null)";	
+	char n[] = "(null)";
 
 	if (s == NULL)
 	{
