@@ -1,4 +1,4 @@
-.TH PRINTF FUNCTION PROJECT
+.TH _printf 3
 
 .SH NAME
 
@@ -19,23 +19,7 @@ OPTION
 .SH DESCRIPTION
 
 .B _printf
-is a function that writes in the stdout. The _printf function is used to display a formatted character string. The first parameter of this function represents the formatting character string: the format. It can be followed by one or more parameters which will be the data used during the display.  We need some specific characters to use _printf function :
-
-.TP
-.BR
-\\"     Double quote.
-
-.TP
-.BR
-\\\\     Backslash
-
-.TP
-.BR
-\\b     Backspace
-
-.TP
-.BR
-\\n     New line
+is a function that writes in the stdout. The _printf function is used to display a formatted character string. The first parameter of this function represents the formatting character string: the format. It can be followed by one or more parameters which will be the data used during the display.  We need some specific characters (operators) to use _printf function.
 
 .SH OPTIONS
 
