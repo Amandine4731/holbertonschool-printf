@@ -24,27 +24,4 @@ int var_s(va_list mylist)
 		s = "(null)";
 	}
 	return (write(1, s, _strlen(s)));
-
-}
-/**
- * var_d - to print an interger
- * @mylist: name of my list of arguments
- * Return: integer
- */
-int var_d(va_list mylist)
-{
-	int d = va_arg(mylist, int) + '0';
-
-	return (write(1, &d, 1));
-}
-/**
- * var_i - to print an interger
- * @mylist: name of my list of arguments
- * Return: integer
- */
-int var_i(va_list mylist)
-{
-	int d = va_arg(mylist, int) + '0';
-
-	return (write(1, &d, 1));
 }
