@@ -32,5 +32,5 @@ int var_s(va_list mylist)
 			putchar(s[i]);
 		}
 	}
-	return (1);
+	return (i);
 }
