@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * _printf - a copy of the function printf
  * @format: is a character string
@@ -9,11 +10,17 @@ int _printf(const char *format, ...)
 	int i = 0, x;
 	va_list mylist;
 
-	if (format == NULL || (format[0] == '%' && format[1] == '%'))
-		return (-1);
+	/**
+	  if (format == NULL || (format[0] == '%' && format[1] == '%'))
+	  return (-1);
+	 */
 
+	if (!format || !strcmp(format, "%"))
+	{
+		return (-1);
+	}
 	va_start(mylist, format);
-	
+
 	x = 0;
 	while (format[x])
 	{
