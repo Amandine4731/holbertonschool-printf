@@ -20,6 +20,8 @@ int _printf(const char *format, ...)
 		if ((format[x + 1] == 0 || format[x + 1] == '%') && format[x] == '%')
 		{
 			putchar('%');
+			i++;
+			x++;
 		}
 		else if (format[x] == '%')
 		{

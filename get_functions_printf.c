@@ -26,5 +26,5 @@ int get_functions_printf(va_list mylist, char s)
 	}
 	putchar('%');
 	putchar(s);
-	return (2);
+	return (i);
 }
