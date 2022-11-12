@@ -10,11 +10,16 @@ int _printf(const char *format, ...)
 	int i = 0, x;
 	va_list mylist;
 
-	if (format == NULL || (format[0] == '%' && format[1] == '%'))
+	if (!format || !strcmp(format, "%"))
+	{
 		return (-1);
-
+	}
 	va_start(mylist, format);
 
+	/**
+	  if (format == NULL || (format[0] == '%' && format[1] == '%'))
+	  return (-1);
+	 */
 	x = 0;
 	while (format[x])
 	{
