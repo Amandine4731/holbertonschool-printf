@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, x, decrem, stringlen;
+	int i = 0, x;
 	va_list mylist;
 
 	if (format == NULL || (format[0] == '%' && format[1] == '%'))
@@ -20,15 +20,11 @@ int _printf(const char *format, ...)
 		if ((format[x + 1] == 0 || format[x + 1] == '%') && format[x] == '%')
 		{
 			putchar('%');
-			x++;
-			i++;
 		}
 		else if (format[x] == '%')
 		{
-			i++;
-			stringlen += get_functions_printf(mylist, format[x + 1]);
+			i += get_functions_printf(mylist, format[x + 1]);
 			x++;
-			decrem++;
 		}
 		else
 		{
@@ -37,7 +33,6 @@ int _printf(const char *format, ...)
 		}
 		x++;
 	}
-	i = i - decrem + stringlen;
 	va_end(mylist);
 	return (i);
 }
