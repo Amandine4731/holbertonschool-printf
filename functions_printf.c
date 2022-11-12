@@ -24,7 +24,6 @@ int var_s(va_list mylist)
 	if (s == NULL)
 	{
 		s = "(NULL)";
-		i++;
 	}
 	else
 	{
