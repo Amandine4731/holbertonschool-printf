@@ -12,7 +12,7 @@ void _abs(int *p)
 }
 /**
   * take_all_the_number - to recup all characters of the number
-  * @s: a pointer 
+  * @s: a pointer
   * @pi: a pointer (to the number of the argument)
   * Return: 1
   */
