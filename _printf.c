@@ -16,8 +16,8 @@ int _printf(const char *format, ...)
 	}
 	va_start(mylist, format);
 	/**
-	  if (format == NULL || (format[0] == '%' && format[1] == '%'))
-	  return (-1);
+	 * if (format == NULL || (format[0] == '%' && format[1] == '%'))
+	 * return (-1);
 	 */
 	x = 0;
 	while (format[x])
