@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
 
 	va_start(mylist, format);
 	
-	x = 0;
 	while (format[x])
 	{
 		if ((format[x + 1] == 0 || format[x + 1] == '%') && format[x] == '%')
