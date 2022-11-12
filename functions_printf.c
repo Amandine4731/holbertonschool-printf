@@ -20,10 +20,15 @@ int var_s(va_list mylist)
 {
 	int i = 0;
 	char *s = va_arg(mylist, char *);
+	char n[] = "(null)";
+	
 
 	if (s == NULL)
 	{
-		s = "(NULL)";
+		for (i = 0; n[i]; i++)
+		{
+			putchar(n[i]);
+		}
 	}
 	else
 	{
