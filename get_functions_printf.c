@@ -2,7 +2,7 @@
 /**
  * get_functions_printf - to select the good variable function
  * @mylist: a list of arguments
- * @s: types of variable
+ * @b: types of variable
  * Return: 2
  */
 int get_functions_printf(va_list mylist, char b)
