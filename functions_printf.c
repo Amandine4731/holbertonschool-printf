@@ -8,7 +8,8 @@ int var_c(va_list mylist)
 {
 	int c = va_arg(mylist, int);
 
-	return (write(1, &c, 1));
+	putchar(c);
+	return (1);
 }
 /**
  * var_s - to print a string
@@ -17,11 +18,19 @@ int var_c(va_list mylist)
  */
 int var_s(va_list mylist)
 {
+	int i = 0;
 	char *s = va_arg(mylist, char *);
 
 	if (s == NULL)
 	{
-		s = "(null)";
+		s = "(NULL)";
 	}
-	return (write(1, s, _strlen(s)));
+	else
+	{
+		for (i = 0; s[i]; i++)
+		{
+			putchar(s[i]);
+		}
+	}
+	return (1);
 }
