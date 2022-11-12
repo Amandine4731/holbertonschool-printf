@@ -12,6 +12,7 @@ int get_functions_printf(va_list mylist, char s)
 		{'s', var_s},
 		{'d', var_i},
 		{'i', var_i},
+		{0, NULL}
 	};
 	int i = 0;
 
