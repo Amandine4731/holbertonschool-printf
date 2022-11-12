@@ -6,13 +6,15 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, x = 0;
+	int i = 0, x;
 	va_list mylist;
 
-	va_start(mylist, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '%'))
 		return (-1);
 
+	va_start(mylist, format);
+	
+	x = 0;
 	while (format[x])
 	{
 		if ((format[x + 1] == 0 || format[x + 1] == '%') && format[x] == '%')
