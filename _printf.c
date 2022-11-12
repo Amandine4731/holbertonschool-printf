@@ -36,5 +36,5 @@ int _printf(const char *format, ...)
 		x++;
 	}
 	va_end(mylist);
-	return (i);
+	return (x);
 }
